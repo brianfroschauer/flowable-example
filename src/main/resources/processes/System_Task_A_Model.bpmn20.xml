@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.flowable.org/processdef">
+  <process id="systemTaskAModel" name="System Task A Model" isExecutable="true">
+    <startEvent id="start" flowable:formFieldValidation="true"></startEvent>
+    <serviceTask id="systemTaskA" name="System Task A" flowable:class="com.demo.flowable.services.SystemTaskA"></serviceTask>
+    <sequenceFlow id="sequenceFlow-38698ab1-cc38-4cce-9965-9f9d23952820" sourceRef="systemTaskA" targetRef="end"></sequenceFlow>
+    <endEvent id="end"></endEvent>
+    <sequenceFlow id="sequenceFlow-090a9994-5804-4658-876c-36f349eab14d" sourceRef="start" targetRef="systemTaskA"></sequenceFlow>
+  </process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_systemTaskAModel">
+    <bpmndi:BPMNPlane bpmnElement="systemTaskAModel" id="BPMNPlane_systemTaskAModel">
+      <bpmndi:BPMNShape bpmnElement="start" id="BPMNShape_start">
+        <omgdc:Bounds height="30.0" width="30.0" x="210.0" y="95.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="systemTaskA" id="BPMNShape_systemTaskA">
+        <omgdc:Bounds height="60.0" width="100.0" x="315.0" y="80.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="end" id="BPMNShape_end">
+        <omgdc:Bounds height="28.0" width="28.0" x="495.0" y="96.0"></omgdc:Bounds>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-38698ab1-cc38-4cce-9965-9f9d23952820" id="BPMNEdge_sequenceFlow-38698ab1-cc38-4cce-9965-9f9d23952820">
+        <omgdi:waypoint x="414.94999999999686" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="495.0" y="110.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="sequenceFlow-090a9994-5804-4658-876c-36f349eab14d" id="BPMNEdge_sequenceFlow-090a9994-5804-4658-876c-36f349eab14d">
+        <omgdi:waypoint x="239.94999906759472" y="110.0"></omgdi:waypoint>
+        <omgdi:waypoint x="315.0" y="110.0"></omgdi:waypoint>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</definitions>
