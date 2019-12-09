@@ -34,6 +34,8 @@ public class SystemTaskDecision implements JavaDelegate {
             case "B": startCaseB(); break;
             default: throw new RuntimeException();
         }
+
+        LOGGER.info("Finish task decision");
     }
 
     private void startCaseA() {

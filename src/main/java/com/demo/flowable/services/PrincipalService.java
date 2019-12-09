@@ -3,6 +3,8 @@ package com.demo.flowable.services;
 import com.demo.flowable.domain.Branch;
 import org.flowable.engine.RuntimeService;
 import org.flowable.engine.TaskService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,6 +19,7 @@ import java.util.Map;
 @Service
 public class PrincipalService {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(PrincipalService.class);
     private final RuntimeService runtimeService;
     private TaskService taskService;
 
@@ -36,6 +39,7 @@ public class PrincipalService {
     }
 
     public long getTasks() {
+        LOGGER.info("Get tasks");
         return taskService.createTaskQuery().count();
     }
 }

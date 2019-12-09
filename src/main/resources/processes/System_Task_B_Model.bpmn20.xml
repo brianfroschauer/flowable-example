@@ -2,7 +2,7 @@
 <definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:flowable="http://flowable.org/bpmn" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" typeLanguage="http://www.w3.org/2001/XMLSchema" expressionLanguage="http://www.w3.org/1999/XPath" targetNamespace="http://www.flowable.org/processdef">
   <process id="systemTaskBModel" name="System Task B Model" isExecutable="true">
     <startEvent id="start" flowable:formFieldValidation="true"></startEvent>
-    <serviceTask id="systemTaskB" name="System Task B" flowable:class="com.demo.flowable.services.SystemTaskB"></serviceTask>
+    <serviceTask id="systemTaskB" name="System Task B" flowable:async="true" flowable:class="com.demo.flowable.services.SystemTaskB"></serviceTask>
     <endEvent id="end"></endEvent>
     <sequenceFlow id="sequenceFlow-090a9994-5804-4658-876c-36f349eab14d" sourceRef="start" targetRef="systemTaskB"></sequenceFlow>
     <sequenceFlow id="sequenceFlow-38698ab1-cc38-4cce-9965-9f9d23952820" sourceRef="systemTaskB" targetRef="end"></sequenceFlow>

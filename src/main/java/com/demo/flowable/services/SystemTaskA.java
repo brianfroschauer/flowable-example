@@ -19,5 +19,12 @@ public class SystemTaskA implements JavaDelegate {
     @Override
     public void execute(DelegateExecution delegateExecution) {
         LOGGER.info("System task A");
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        LOGGER.info("Finish task A");
     }
 }
