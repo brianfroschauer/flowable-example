@@ -33,7 +33,6 @@ public class PrincipalService {
     @Transactional
     public void startProcess(Branch branch) {
         final Map<String, Object> variables = new HashMap<>();
-
         variables.put("branch_name", branch.getName());
         runtimeService.startProcessInstanceByKey("systemTaskPrincipalModel", variables);
     }

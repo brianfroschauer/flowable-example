@@ -18,6 +18,7 @@ public class SystemTaskB implements JavaDelegate {
 
     @Override
     public void execute(DelegateExecution delegateExecution) {
-        LOGGER.info("System task B");
+        LOGGER.info(delegateExecution.getVariables().toString());
+        LOGGER.info("Loading system task B...");
     }
 }

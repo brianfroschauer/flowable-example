@@ -26,6 +26,10 @@ public class SystemTaskDecision implements JavaDelegate {
 
     @Override
     public void execute(DelegateExecution delegateExecution) {
+        LOGGER.info(delegateExecution.getVariables().toString());
+        LOGGER.info(delegateExecution.getCurrentActivityId());
+        LOGGER.info(delegateExecution.getProcessInstanceBusinessKey());
+        LOGGER.info(delegateExecution.getTenantId());
         LOGGER.debug("System task decision");
         final String branchName = delegateExecution.getVariable("branch_name", String.class);
 
